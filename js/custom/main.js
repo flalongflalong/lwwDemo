@@ -40,6 +40,17 @@
                     DBO.db = event.target;
                 };
             },
+            //创建下拉窗口
+            createDropdownMenu:function(el,menuOpt) {
+                el.attr('data-toggle','dropdown').addClass('dropdown-toggle');
+                var h = '<ul class="dropdown-menu animated fadeInRight m-t-xs">';
+                a.each(menuOpt,function (index,c) {
+                    var co = c.openOption,ct = c.title,cc = c.class;
+                    h += '<li '+ (cc?"class='"+cc+"'":"") +'>'+ (co?'<a '+ (!co.target?'class="J_menuItem"':"") + ' href="'+ co.url +'">'+ (ct?ct:"") +'</a>':'') +'</li>';
+                })
+                h += '</ul>';
+                return $(h).insertAfter(el)
+            },
             readData: function (b, c) {
                 var d = c && jQuery.isFunction(c);
                 if (!b) throw new Error("readData£º[" + b + "] is not exist !");

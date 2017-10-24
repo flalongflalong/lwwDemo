@@ -35,20 +35,68 @@
             console.log('index init!!!')
             var opt = this.opt;
             var headOpt = opt.head;
+            var navOpt = opt.nav;
             b.indexedDbInit(opt.indexedDBOpt)
-            var allHtml = '';
-            this.pageNav().themeInit().contabsH();
+            var allHtml = '<!--左侧导航开始--><nav class="navbar-default navbar-static-side" role="navigation"><div class="nav-close"><i class="fa fa-times-circle"></i></div><div class="sidebar-collapse"></div><ul class="nav" id="side-menu"></ul></nav><!--左侧导航结束-->' +
+                '<!--右侧部分开始--><div id="page-wrapper" class="gray-bg dashbard-1">' +
+                '<div class="row border-bottom">' +
+                '<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0"><div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a></div><ul class="nav navbar-top-links navbar-right"></ul></nav>' +
+                '</div>' +
+                '<div class="row content-tabs">' +
+                '<button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i></button>' +
+                '<nav class="page-tabs J_menuTabs"><div class="page-tabs-content"><a href="javascript:void(0);" class="active J_menuTab" data-id="'+ navOpt.firstPage +'">首页</a></div></nav>' +
+                '<button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i></button>' +
+                '<div class="btn-group roll-nav roll-right"><button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span></button><ul role="menu" class="dropdown-menu dropdown-menu-right"><li class="J_tabShowActive"><a>定位当前选项卡</a></li><li class="divider"></li><li class="J_tabCloseAll"><a>关闭全部选项卡</a></li><li class="J_tabCloseOther"><a>关闭其他选项卡</a></li></ul></div>' +
+                '<a href="'+ headOpt.logoutPage +'" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>' +
+                '</div>' +
+                '<div class="row J_mainContent" id="content-main">' +
+                '<iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="'+ navOpt.firstPage +'" frameborder="0" data-id="'+ navOpt.firstPage +'" seamless></iframe>' +
+                '</div>' +
+                '<div class="footer"><div class="pull-right">&copy; 2014-2017 <a href="http://www.zi-han.net/" target="_blank">lwwwwwwwwwwwwww</a></div></div>' +
+                '</div><!--右侧部分结束-->',
+            g = this.el[this.addstr](allHtml);
+            a.extend(this.dom, {
+                cont: this.el,
+                headLeftCont:g.find('ul#side-menu'),
+                headTopCont:g.find('.navbar-static-top'),
+                iframeCont:g.find('div#content-main')
+            })
+            this.pageNavInit()
+            this.pageNav().contabsH();
+            /*.themeInit()*/
+
+        },
+        pageNavInit:function () {
+            var c = this,opt = this.opt,headOpt = opt.head,navOpt = opt.nav,d = c.dom,f = d.cont,hl = d.headLeftCont,ht = d.headTopCont,ic = d.iframeCont;
+            var headMenu = headOpt.dropdownMenu,navMenu = navOpt.data;
+            var hh = '<li class="nav-header"><div class="dropdown profile-element"><span><img alt="image" class="img-circle" src="'+ headOpt.userIcon +'" /></span><a href="javascript:void(0)"><span class="clear"><span class="block m-t-xs"><strong class="font-bold">'+ headOpt.userName +'</strong></span><span class="text-muted text-xs block">'+ headOpt.userType +'<b class="caret"></b></span></span></a></div></li>',
+                g = hl.append(hh);
+            var head_a = g.find('a');
+
+            headMenu && b.createDropdownMenu(head_a,headMenu);
+
+            var liH = '';
+            a.each(navMenu,function (index,c) {
+                var ci = c.icon,ct = c.title,cc = c.chirdren,cl = c.label,co = c.openOption;
+
+                liH += '<li>';
+                liH += '<a '+ (co?('class="J_menuItem" href="'+ co.url +'"'):('href="javascript:void(0)"')) +'>'+ (ci?('<i class="fa '+ ci +'"></i>'):'') +'<span class="nav-label">'+ ct +'</span>'+ (cc?'<span class="fa arrow"></span>':(cl?('<span class="label label-warning pull-right">'+cl+'</span>'):'')) +'</a>';
+                liH += '</li>'
+            })
+            var navL = hl.append(liH);
+
+            return this
         },
         //首页布局 H+
         pageNav: function () {
-            var c = this;
+            var c = this,d = c.dom,f = d.cont;
             function NavToggle() {
                 $('.navbar-minimalize').trigger('click');
             }
 
             // 侧边栏高度
             function fix_height() {
-                var heightWithoutNavbar = $("body > #wrapper").height() - 61;
+                var heightWithoutNavbar = f.height() - 61;
                 $(".sidebard-panel").css("min-height", heightWithoutNavbar + "px");
             }
 
@@ -60,12 +108,6 @@
                 $('#right-sidebar').toggleClass('sidebar-open');
             });
 
-            // 右侧边栏使用slimscroll
-            $('.sidebar-container').slimScroll({
-                height: '100%',
-                railOpacity: 0.4,
-                wheelStep: 10
-            });
 
             // Small todo handler
             $('.check-link').click(function () {
@@ -76,14 +118,20 @@
                 return false;
             });
 
-            //固定菜单栏
-            $(function () {
-                $('.sidebar-collapse').slimScroll({
-                    height: '100%',
-                    railOpacity: 0.9,
-                    alwaysVisible: false
-                });
+            // // 右侧边栏使用slimscroll
+            $('.sidebar-container').slimScroll({
+                height: '100%',
+                railOpacity: 0.4,
+                wheelStep: 10
             });
+            // //固定菜单栏
+            // $(function () {
+            //     $('.sidebar-collapse').slimScroll({
+            //         height: '100%',
+            //         railOpacity: 0.9,
+            //         alwaysVisible: false
+            //     });
+            // });
 
             // 菜单切换
             $('.navbar-minimalize').click(function () {
