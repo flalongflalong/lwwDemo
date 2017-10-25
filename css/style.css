@@ -396,7 +396,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
     background: #f3f3f4;
 }
 
-.fixed-nav #wrapper {
+.fixed-nav #mainIndex {
     padding-top: 60px;
     box-sizing: border-box;
 }
@@ -617,8 +617,8 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     margin: 0;
 }
 
-.top-navigation.fixed-nav #wrapper,
-.fixed-nav #wrapper.top-navigation {
+.top-navigation.fixed-nav #mainIndex,
+.fixed-nav #mainIndex.top-navigation {
     margin-top: 50px;
 }
 
@@ -3352,7 +3352,7 @@ body {
     height: 100%;
 }
 
-body.full-height-layout #wrapper,
+body.full-height-layout #mainIndex,
 body.full-height-layout #page-wrapper {
     height: 100%;
 }
@@ -3365,14 +3365,14 @@ body.boxed-layout {
     background: url('patterns/shattered.png');
 }
 
-body.boxed-layout #wrapper {
+body.boxed-layout #mainIndex {
     background-color: #2f4050;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.top-navigation.boxed-layout #wrapper,
-.boxed-layout #wrapper.top-navigation {
+.top-navigation.boxed-layout #mainIndex,
+.boxed-layout #mainIndex.top-navigation {
     max-width: 1300px !important;
 }
 
@@ -3508,7 +3508,7 @@ video {
 
 /* WRAPPERS */
 
-#wrapper {
+#mainIndex {
     width: 100%;
     overflow-x: hidden;
     background-color: #2f4050;
@@ -7378,7 +7378,7 @@ body.skin-1 {
     background: #ecba52 !important;
 }
 
-body.boxed-layout.skin-3 #wrapper {
+body.boxed-layout.skin-3 #mainIndex {
     background: #3e2c42;
 }
 
