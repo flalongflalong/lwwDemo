@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>数据地图demo</title>
+	<script type="text/javascript" src="/js/com/jquery/1.12.4/jquery.min.js"></script>
+	<!--<script src="../js/commonJs/D3/d3.v4.js"></script>-->
+	<script src="/js/com/d3-master/4.11.0/d3.js"></script>
+	<script src="js/commonJs/jquery.json.js"></script>
+	<script src="js/commonJs/tc2c_jsbridge.js"></script>
+	<script src="js/commonJs/jbase64.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<!--<link rel="stylesheet" type="text/css" href="../css/main-min.css"/>-->
+</head>
+<body>
+<!--[if lte IE 8]>
+您使用的浏览器需要安装安全控件才能访问系统! <a href="GoogleChromeframe.msi">点击下载</a>
+<![endif]-->
+<!-- header-site开始 -->
+<!--<div class="header-site" id="headerBar">-->
+	<!--<div class="logo-site">-->
+		<!--<img src="img/logo.jpg" width="100%"/>-->
+	<!--</div>-->
+<!--</div>-->
+<!-- header-site结束 -->
+
+<!-- body-site开始 -->
+<div class="body-site">
+
+	<div class="body-site-leftContent chart-container" id="chart"></div>
+
+	<div class="body-site-rightContent" id="nodeInfoContainer">
+		<div class="details-content">
+			<ul>
+				<li class="title"><span>系统区属性</span></li>
+				<li class="attr f_name"><span class="t">名称：</span><span class="value">集成性数据区</span></li>
+				<li class="attr f_desc"><span class="t">描述：</span><span class="value">数据仓库类系统集成区</span></li>
+				<li class="attr f_belong"><span class="t">包含系统数：</span><span class="value">5</span></li>
+				<li class="attr f_contain_fact_count"><span class="t">包含事实表数：</span><span class="value">24</span></li>
+				<li class="attr f_contain_pros_count"><span class="t">包含字段数：</span><span class="value">65535</span></li>
+				<li class="attr f_pre"><span class="t">上游关联系统域：</span><span class="value link">结构化数据区</span></li>
+				<li class="attr f_next"><span class="t">下游关联系统域：</span><span class="value link">应用服务区</span></li>
+				<li class="attr btn-container info-btn-c"><span class="t">详细信息：</span><button class="val-btn" onclick="onShowInfo(0)">系统信息</button><button class="val-btn" onclick="onShowInfo(1)">ER信息</button></li>
+				<li class="attr btn-container blood-btn-c"><span class="t">数据流向：</span><button class="val-btn" onclick="onShowInfo(2)">查看</button></li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<!-- body-site结束 -->
+
+<script src="js/commonJs/D3/d3-datamapsankey.js"></script>
+<script src="js/commonJs/D3/dataSankeyApp.js"></script>
+<script src="js/commonJs/D3/colorbrewer.js"></script>
+<script src="js/commonJs/D3/geometry.js"></script>
+<script src="js/commonJs/D3/forceApp.js"></script>
+<script src="js/commonJs/main.js"></script>
+<!--<script src="../js/commonJs/D3/dataMap-min.js"></script>-->
+<!--<script src="../js/commonJs/main-min.js"></script>-->
+
+</body>
+</html>

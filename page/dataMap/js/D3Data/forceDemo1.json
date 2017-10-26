@@ -1,0 +1,36 @@
+{
+  "data": {
+    "A5": {
+      "childMaxX": "1",
+      "childMaxY": "2",
+      "dependedOnBy": [],
+      "depends": [
+        "A3"
+      ],
+      "id": "A5",
+      "metadata": "1",
+      "name": "应用数据区",
+      "nodeId": 9,
+      "px": "3",
+      "py": "1",
+      "type": "AppData",
+      "value": "206"
+    },
+    "A3": {
+      "childMaxX": "1",
+      "childMaxY": "1",
+      "dependedOnBy": [
+        "A5"
+      ],
+      "depends": [],
+      "id": "A3",
+      "metadata": "1",
+      "name": "非结构化区域",
+      "nodeId": 7,
+      "px": "1",
+      "py": "2",
+      "type": "Unstructured",
+      "value": "1"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "nodes": [
+    {"id": "B2502", "name": "高管系统逻辑模型库", "nodeId": 78, "type": "B", "value": "2"},
+    {"childMaxX": "1","childmaxY": "2","id": "15","name": "应用数据区",	"nodeId": 4,"type": "AppData","x": "3","y": "1"},
+    {"childMaxX": "3","childmaxY": "2","id": "2502","name": "高管驾驶舱","nodeId": 12,"parent": "15","type": "BigData","x": "1","y": "2","center":"1"},
+    {"id": "D2502", "name": "高管系统ETL记录", "nodeId": 89, "type": "D", "value": "2"}
+  ],
+  "links": [
+    {"source": "2502", "target": "D2502", "value": "1"},
+    {"source": "2502", "target": "B2502", "value": "1"}
+  ]
+}

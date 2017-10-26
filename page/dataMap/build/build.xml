@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="compress" basedir="..\" name="core">
+    <!-- 项目的 web 路径 -->
+    <property name="path" value="..\static"/>
+    <!-- 部署的输出路径 -->
+    <property name="targetDir" value="../static/build/build_output"/>
+    <!-- 源文件路径(src) -->
+    <property name="code.src" value="..\static"/>
+    <property name="baseService" value="baseService"/>
+    <!--建议使用 closure-compiler 压缩js文件，使用 yui-compressor 压缩css文件 -->
+    <!-- !!! YUI Compressor 路径 !!! -->
+    <property name="yuicompressor" location="../static/build/lib/yuicompressor-2.4.2.jar"/>
+    <!-- !!! closure-compiler 路径  !!! -->
+    <property name="closure.path" location="../static/build/lib/closure-compiler.jar"/>
+
+    <!-- =================================
+       target: init 初始化输出目录
+      ================================= -->
+    <target name="init">
+        <echo message="begin to init the init"/>
+        <echo message="delete all reference files."/>
+        <delete dir="${targetDir}"/>
+        <echo message="delete end"/>
+        <echo message="make the reference files."/>
+        <mkdir dir="${targetDir}"/>
+        <echo message="make end."/>
+    </target>
+
+    <!-- ================================= 
+      target: concat 拼接（合并）文件        
+     ================================= -->
+    <target name="concat" depends="init" description="concat code">
+        <echo message="Concat Code Files Begin!!!"/>
+        <!-- 需要注意这里的拼接顺序 --><!-- JS -->
+        <concat destfile="${targetDir}/js/d3.v4.js" encoding="utf-8" fixlastline="on">
+            <fileset dir="${code.src}/js/commonJs/D3" includes="d3.v4.js"/>
+        </concat>
+        <concat destfile="${targetDir}/js/dataMap.js" encoding="utf-8" fixlastline="on">
+            <fileset dir="${code.src}/js/commonJs/D3" includes="d3-datamapsankey.js"/>
+            <fileset dir="${code.src}/js/commonJs/D3" includes="dataSankeyApp.js"/>
+            <fileset dir="${code.src}/js/commonJs/D3" includes="geometry.js"/>
+            <fileset dir="${code.src}/js/commonJs/D3" includes="colorbrewer.js"/>
+            <fileset dir="${code.src}/js/commonJs/D3" includes="forceApp.js"/>
+        </concat>
+        <concat destfile="${targetDir}/js/main.js" encoding="utf-8" fixlastline="on">
+            <fileset dir="${code.src}/js/commonJs" includes="main.js"/>
+        </concat>
+
+        <!-- CSS -->
+        <concat destfile="${targetDir}/css/main.css" encoding="utf-8">
+            <fileset dir="${code.src}/css" includes="main.css"/>
+        </concat>
+
+        <echo message="Concat Code Files Finished!!!"/>
+    </target>
+
+    <!-- ================================= 
+          target: copy 拷贝文件 
+         ================================= -->
+    <target name="copy_asset" depends="concat" description="copy the asset file">
+        <echo message="Copy Asset Begin"/>
+        <!-- main.html -->
+        <copy todir="${targetDir}/" overwrite="true">
+            <fileset dir="${path}/" includes="*.html"/>
+        </copy>
+
+        <echo message="Copy Asset Finished"/>
+    </target>
+
+    <!-- ================================= 
+          target: compress 压缩 js && css  
+         ================================= -->
+    <target name="compress" depends="copy_asset" description="compress code">
+        <echo message="Compress Code Begin"/>
+
+        <apply executable="java" verbose="true" dest="${targetDir}/js" failonerror="true" parallel="false">
+            <fileset dir="${targetDir}/js" includes="*.js"/>
+            <arg line="-jar"/>
+            <arg path="${closure.path}"/>
+            <arg value="--warning_level"/>
+            <arg value="QUIET"/>
+            <arg value="--js"/>
+            <srcfile/>
+            <arg value="--js_output_file"/>
+            <targetfile/>
+            <mapper type="glob" from="*.js" to="*-min.js"/>
+        </apply>
+
+        <apply executable="java" verbose="true" dest="${targetDir}/css" failonerror="true" parallel="false">
+            <fileset dir="${targetDir}/css" includes="*.css"/>
+            <arg line="-jar"/>
+            <arg path="${yuicompressor}"/>
+            <arg line="--charset utf-8"/>
+            <arg value="--type"/>
+            <arg value="css"/>
+            <arg value="-o"/>
+            <targetfile/>
+            <mapper type="glob" from="*.css" to="*-min.css"/>
+        </apply>
+
+        <echo message="Compress Code Finished"/>
+
+        <!--<echo message="Clean Begin"/>-->
+        <!-- =================================
+               move: *-min.js/*-min.css 转换为 *.js/*.css
+              ================================= -->
+        <!--<move file="${targetDir}/js/all-min.js"-->
+              <!--tofile="${targetDir}/js/all.js"/>-->
+        <!--<move file="${targetDir}/css/all-min.css"-->
+              <!--tofile="${targetDir}/css/all.css"/>-->
+        <!--<echo message="Clean Finished"/>-->
+
+    </target>
+</project>
