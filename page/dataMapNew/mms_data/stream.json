@@ -1,0 +1,155 @@
+[{
+    "id": "q1321f551682411794e76a87cc962c47",
+    "belong": "源系统数据区",
+    "name": "全流程信贷系统",
+    "downstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }]
+}, {
+    "id": "u0e2b31298d841fbb1394d70afd16ec3",
+    "belong": "数据应用区",
+    "name": "统一报表系统",
+    "upstream": [{
+        "name": "统一报表集市",
+        "belong": "数据集成区"
+    }],
+    "downstream": [{
+        "name": "关键业务指标应用系统",
+        "belong": "数据应用区"
+    }]
+}, {
+    "id": "j9b73bedfcf6488cb29bdc4e97605404",
+    "belong": "源系统数据区",
+    "name": "中小企业贷款管理系统",
+    "downstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }]
+}, {
+    "id": "s6fa7adfbb014cad9c1b7e591b80950d",
+    "belong": "源系统数据区",
+    "name": "核心报表系统",
+    "downstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }]
+}, {
+    "id": "pecd26bd454a4c5298d22b0003d65d98",
+    "belong": "源系统数据区",
+    "name": "核心系统",
+    "downstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }]
+}, {
+    "id": "n9dbb31102934c2aaefe1db1648e2433",
+    "belong": "源系统数据区",
+    "name": "核心柜面系统",
+    "downstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }]
+}, {
+    "id": "mae74486148e457f8cdb83116a4e29bd",
+    "belong": "数据集成区",
+    "name": "基础汇总区",
+  "upstream": [{
+        "name": "临时区",
+        "belong": "数据集成区"
+    }],
+    "downstream": [{
+        "name": "统一报表集市",
+        "belong": "数据集成区"
+    }]
+}, {
+    "id": "nef417dd77e54957ae9e025a03f45cdf",
+    "belong": "数据集成区",
+    "name": "临时区",
+    "upstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }],
+    "downstream": [{
+        "name": "基础汇总区",
+        "belong": "数据集成区"
+    }]
+}, {
+    "id": "ucbeb51a50d642a18a216cee5d1c1b03",
+    "belong": "数据集成区",
+    "name": "统一报表集市",
+   "upstream": [{
+        "name": "基础汇总区",
+        "belong": "数据集成区"
+    }],
+    "downstream": [{
+        "name": "统一报表",
+        "belong": "数据应用区"
+    }]
+}, {
+    "id": "p393ff814f524b09995f226fe57597e0",
+    "belong": "数据交换区",
+    "name": "DS区",
+  "upstream": [{
+        "name": "客户关系管理系统",
+        "belong": "源系统数据区"
+    },{
+        "name": "核心国结系统",
+        "belong": "源系统数据区"
+    },{
+        "name": "中小企业贷款管理系统",
+        "belong": "源系统数据区"
+    },{
+        "name": "客户关系管理系统",
+        "belong": "源系统数据区"
+    },{
+        "name": "核心柜面系统",
+        "belong": "源系统数据区"
+    },{
+        "name": "核心系统",
+        "belong": "源系统数据区"
+    },{
+        "name": "全流程信贷系统",
+        "belong": "源系统数据区"
+    },{
+        "name": "核心报表系统",
+        "belong": "源系统数据区"
+    }],
+  "downstream": [{
+        "name": "临时区",
+        "belong": "数据集成区"
+    }]
+}, {
+    "id": "t2328e876ec14835b0fd0d6cc23e7822",
+    "belong": "源系统数据区",
+    "name": "ODS系统",
+    "upstream": [{
+        "name": "DS区",
+        "belong": "数据集成区"
+    }]
+}, {
+    "id": "j379d21aa5fd46e69092203ab372d7d1",
+    "belong": "源系统数据区",
+    "name": "核心国结系统",
+    "downstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }]
+}, {
+    "id": "s8bae1fa626e4436a373ef34a4ecde6e",
+    "belong": "数据应用区",
+    "name": "关键业务指标应用系统",
+    "upstream": [{
+        "name": "统一报表",
+        "belong": "数据应用区"
+    }]
+}, {
+    "id": "ic298f5fa9e24bc28d62168623b56e35",
+    "belong": "源系统数据区",
+    "name": "客户关系管理系统",
+    "downstream": [{
+        "name": "DS区",
+        "belong": "数据交换区"
+    }]
+}
+]

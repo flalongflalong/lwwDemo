@@ -1,0 +1,370 @@
+.metadata_assets {
+    width: 100%;
+    height: 963px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: url('../mms_images/backface.png');
+    background-size: 100% 100%;
+}
+
+/*国家开发银行LOGO开始*/
+.metadata_map_title {
+  width: 100%;
+  height: 80px;
+  display:-webkit-flx;
+  display:flex;
+  align-items:center;
+}
+
+/*公用的flex样式*/
+.flex_public {
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+
+
+.metadata_map_title span {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url('../mms_images/cbd_logo_1.jpg');
+    background-size: 100% 100%;
+}
+
+.metadata_map_title p {
+    font-size: 22px;
+    font-family: '微软雅黑';
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+/*国家开发银行LOGO结束*/
+
+/*展示的信息列表开始*/
+
+.metadata_map_list {
+  width: 100%;
+  height: 850px;
+  display:-webkit-flex;
+  display:flex;
+}
+
+.metadata_info_left {
+  width: 66%;
+  height: 100%;
+}
+.metadata_info_right {
+  width: 33%;
+  height: 100%;
+  margin-left: 1%;
+}
+
+/*左边列表开始*/
+
+.metadata_info_title {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  padding: 0 15px;
+  box-sizing:border-box;
+  background-color: #017aeb;
+}
+
+.metadata_info_title span {
+  cursor: pointer;
+}
+
+.metadata_info_map {
+  width: 100%;
+  height: 800px;
+  position:relative;
+  background-color: #fff;
+}
+
+.metadata_options {
+  width: 100%;
+  height: 90px;
+  padding: 0 30px;
+  box-sizing:border-box;
+  font-size: 14px;
+  background-color: #fff;
+}
+.options_radio label {
+  cursor:pointer;
+}
+
+.metadata_graph {
+  width: 100%;
+  height: 710px;
+}
+
+
+/*全景视图的地图展示*/
+#view_graph {
+  background:url('../mms_images/view_pic.png');
+  background-size:80% 90%;
+  background-repeat:no-repeat;
+  background-position:120px 0;
+}
+
+
+
+/*地图图例开始*/
+.map_legend {
+  width: 120px;
+  height: 140px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #ccc,-1px -1px 1px #ccc;
+}
+
+.legend_title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 10px;
+  box-sizing:border-box;
+  color:#878787;
+}
+
+.legend_info {
+  height: 100px;
+  padding-left: 10px;
+  box-sizing:border-box;
+}
+
+.legend_info ul li {
+  height: 20px;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  color:#878787;
+  font-size: 12px;
+}
+
+.legend_info ul li span {
+  display:block;
+  width: 12px;
+  height: 12px;
+  margin-right: 7px;
+}
+
+/*地图图例结束*/
+.options_checkbox select{
+  margin-top: 5px;
+  width: 140px;
+  height: 26px;
+  font-size: 12px;
+  background-color: #eaeaea;
+}
+
+
+
+.options_checkbox select option {
+  background-color: #fff;
+}
+
+.metadata_info_map .view_flex {
+  justify-content:flex-start;
+}
+
+.metadata_info_map .view_flex .options_checkbox {
+  margin-right: 25px;
+}
+
+.options_radio input {
+  vertical-align: middle;
+  margin-left: 20px;
+  cursor:pointer;
+}
+/*饼图的折线样式开始*/
+polyline {
+    fill: none;
+    stroke: purple;
+    stroke-width: 2px;
+    stroke: 5px;
+}
+
+
+/*饼图的折线样式结束*/
+
+
+
+
+/*左边列表结束*/
+
+/*右边列表开始*/
+.login_info {
+  height: 14%;
+  margin-bottom: 2%;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  padding-left: 18px;
+  box-sizing:border-box;
+  background-color: #fff;
+}
+
+.update_info {
+  height: 52%;
+  margin-bottom: 2%;
+  background-color: #fff;
+}
+
+.recents {
+  height: 31%;
+  background-color: #fff;
+}
+
+/*用户登录信息开始*/
+
+.username_pic {
+  width: 54px;
+  height: 68px;
+  background:url('../mms_images/username.png');
+  background-size:100% 100%;
+}
+
+.username_info {
+  width: 91%;
+  height: 100%;
+  padding: 15px 20px;
+  box-sizing:border-box;
+}
+
+.username_wel, .login_time, .username_center {
+  display:-webkit-flex;
+  display:flex;
+  height: 33%;
+  font-size: 14px;
+  align-items:center;
+}
+
+.personal_center {
+  display:none;
+}
+
+.personal_center, .exit {
+  color:#5caaef;
+  text-decoration: underline;
+  margin-right: 20px;
+  cursor:pointer;
+}
+
+.name_visit_bottom ul {
+  width: 100%;
+  height: 100%;
+}
+
+div.name_visit_bottom ul li {
+  height: 12.5%;
+}
+
+
+/*用户登录信息结束*/
+
+/*元数据更新情况开始*/
+
+.update_info_title {
+  height: 8%;
+  padding: 0 15px;
+  font-size: 14px;
+  color:#fff;
+  background-color: #017aeb;
+}
+
+.update_info_title span {
+  cursor:pointer;
+  display:none;
+}
+
+.update_info_list {
+  height: 92%;
+}
+
+.name_time {
+  height: 7%;
+  font-size: 12px;
+  padding: 0 10px;
+  box-sizing:border-box;
+  color:#8d8d8d;
+  background-color: #e5e5e5;
+}
+
+.system_list {
+  height: 93%;
+  padding: 0 10px;
+  box-sizing:border-box;
+}
+.system_list ul {
+  height: 100%;
+}
+.system_list ul li {
+  height: 7%;
+  display:-webkit-flex;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size: 10px;
+  color:#959595;
+}
+
+.last_visit_top {
+  height: 15%;
+}
+
+.last_visit_bottom {
+  height: 85%;
+}
+
+.name_visit_top {
+  height: 12%;
+}
+
+.name_visit_bottom {
+  height: 88%;
+}
+
+
+/*元数据更新情况结束*/
+
+/*元数据关系开始*/
+
+.metadata_relation_option {
+  height: 20%;
+  padding: 0 25px;
+  box-sizing:border-box;
+  font-size: 14px;
+}
+
+.update_info_list .metadata_relation_option {
+  justify-content:flex-start;
+}
+
+.metadata_relation_option .options_checkbox {
+  margin-right: 25px;
+}
+
+
+.metadata_relation_map {
+  height: 80%;
+  background:url('../mms_images/force.jpg');
+  background-size:90% 100%;
+  background-repeat: no-repeat;
+  background-position: 30px 0;
+  // background-color: orange;
+}
+
+
+/*元数据关系结束*/
+
+/*右边列表结束*/
+/*展示的信息列表结束*/
+
+
+

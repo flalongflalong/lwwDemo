@@ -1,0 +1,459 @@
+﻿{
+    "nodes": [
+        {
+            "name": "全流程信贷系统",
+            "id": "q1321f551682411794e76a87cc962c47",
+            "chart": [
+            {
+                "id": "1",
+                "name":"T_DM_CORP_CUST_DPST_ACCT",
+                "info": [
+                {
+                    "id": "A1",
+                    "name": "业务元数据",
+                    "info": [
+                    {
+                        "name": "质量业务规则",
+                        "info": "暂无信息"
+                    },
+                    {
+                        "name": "接口业务规则",
+                        "info": "暂无信息"
+                    },
+                    {
+                        "name": "整合业务规则",
+                        "info": "暂无信息"
+                    },
+                    {
+                        "name": "交换业务规则",
+                        "info": "暂无信息"
+                    }]
+                },
+                {
+                    "id": "A2",
+                    "name": "技术元数据",
+                    "info":
+                    {
+                        "subClass": [
+                        {
+                            "name": "表",
+                            "subClass": [
+                            {
+                                "name": "表名",
+                                "info": "V_RPT_FUNC_SORT_RELA"
+                            },
+                            {
+                                "name": "中文名称",
+                                "info": "暂无"
+                            },
+                            {
+                                "name": "表空间",
+                                "info": "暂无"
+                            },
+                            {
+                                "name": "描述",
+                                "info": "暂无"
+                            },
+                            {
+                                "name": "所属用户",
+                                "info": "URS3"
+                            }]
+                        },
+                        {
+                            "name": "字段",
+                            "subClass": [
+                            {
+                                "name": "FUNCCODE",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "FUNCCODE"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "功能编码"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "12"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "SORT_CODE",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "SORT_CODE"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "分类编码"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "暂无信息"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "NAME",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "NAME"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "名称"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "50"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "REPORTID",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "REPORTID"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "20"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "ROLEID",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "ROLEID"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "角色ID"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "64"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            }]
+                        }]
+                    }
+                },
+                {
+                    "id": "A3",
+                    "name": "操作元数据",
+                    "info": [
+                    {
+                        "name": "数据加工情况",
+                        "info": "暂无"
+                    },
+                    {
+                        "name": "用户使用情况",
+                        "info": "暂无"
+                    },
+                    {
+                        "name": "表归档情况",
+                        "info": "暂无"
+                    },
+                    {
+                        "name": "表备份情况",
+                        "info": "暂无"
+                    }]
+                }]
+            }]
+        },
+        {
+            "name": "客户关系管理系统",
+            "id": "ic298f5fa9e24bc28d62168623b56e35",
+            "chart": [
+            {
+                "id": "1",
+                "info": [
+                {
+                    "id": "A1",
+                    "name": "业务元数据",
+                    "info": [
+                    {
+                        "name": "质量业务规则",
+                        "info": ""
+                    },
+                    {
+                        "name": "接口业务规则",
+                        "info": ""
+                    },
+                    {
+                        "name": "整合业务规则",
+                        "info": ""
+                    },
+                    {
+                        "name": "交换业务规则",
+                        "info": ""
+                    }]
+                },
+                {
+                    "id": "A2",
+                    "name": "技术元数据",
+                    "info":
+                    {
+                        "subClass": [
+                        {
+                            "name": "表",
+                            "subClass": [
+                            {
+                                "name": "表名",
+                                "info": "V_RPT_FUNC_SORT_RELA"
+                            },
+                            {
+                                "name": "中文名称",
+                                "info": "暂无"
+                            },
+                            {
+                                "name": "表空间",
+                                "info": "暂无"
+                            },
+                            {
+                                "name": "描述",
+                                "info": "暂无"
+                            },
+                            {
+                                "name": "所属用户",
+                                "info": "URS3"
+                            }]
+                        },
+                        {
+                            "name": "字段",
+                            "subClass": [
+                            {
+                                "name": "FUNCCODE",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "FUNCCODE"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "功能编码"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "12"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "SORT_CODE",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "SORT_CODE"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "分类编码"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": ""
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "NAME",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "NAME"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "名称"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "50"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "REPORTID",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "REPORTID"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "20"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            },
+                            {
+                                "name": "ROLEID",
+                                "subClass": [
+                                {
+                                    "name": "字段名",
+                                    "info": "ROLEID"
+                                },
+                                {
+                                    "name": "中文名称",
+                                    "info": "角色ID"
+                                },
+                                {
+                                    "name": "长度",
+                                    "info": "64"
+                                },
+                                {
+                                    "name": "字段类型",
+                                    "info": "VARCHAR"
+                                },
+                                {
+                                    "name": "注释",
+                                    "info": "暂无"
+                                },
+                                {
+                                    "name": "是否主键",
+                                    "info": "否"
+                                }]
+                            }]
+                        }]
+                    }
+                },
+                {
+                    "id": "A3",
+                    "name": "操作元数据",
+                    "info": [
+                    {
+                        "name": "数据加工情况",
+                        "info": "暂无"
+                    },
+                    {
+                        "name": "用户使用情况",
+                        "info": "暂无"
+                    },
+                    {
+                        "name": "表归档情况",
+                        "info": "暂无"
+                    },
+                    {
+                        "name": "表备份情况",
+                        "info": "暂无"
+                    }]
+                }]
+            }]
+        }
+    ]
+}

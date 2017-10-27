@@ -1,0 +1,124 @@
+#serach_result {
+    position: absolute;
+    right: 19px;
+    top: 70px;
+    width: 277px;
+    height: 360px;
+    border: 1px solid #D4D4D4;
+    background-color: #FFFFFF;
+    overflow: auto;
+    display: none;
+}
+
+#import_div {
+    width: 100%;
+    height: 60px;
+    display: -webkit-flex;
+    display:flex;
+    align-items: center;
+}
+
+#import_div span {
+    display: inline-block;
+    display: -webkit-flex;
+    display;
+    flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+#import_div span:nth-child(1) {
+    width: 50%;
+    padding-left: 5%;
+}
+
+#import_div span:nth-child(2) {
+    width: 36%;
+}
+
+.glyphicon-remove {
+    right: -5%;
+}
+
+#search_list {
+    width: 100%;
+}
+
+#search_list ul {
+    min-height: 80px;
+    height: 80px;
+    margin-left: 10px;
+    width: 90%;
+    padding-top: 2px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #D4D4D4;
+    display: -webkit-flex;
+    display:flex;
+    
+}
+
+// #search_list ul li {
+//     line-height: 14px;
+// }
+#search_list span {
+    display: block;
+}
+
+#search_list ul li:nth-child(1) {
+    color: #FFFFFF; // float: left;
+    width: 10%;
+    background-image: url(../mms_images/bg1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /*height: 100%;*/
+    text-align: center;
+    /*background-image: url(../mms_images/bg.jpg);*/
+    /*background-position:-18px -139px;*/
+}
+
+#search_list ul li:nth-child(2) {
+    // float: left;
+    width: 85%;
+}
+
+#search_list ul li:nth-child(2) span {
+    display: block;
+    height: 30%;
+    display: -webkit-flex;
+    display;
+    flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+#search_list ul li:nth-child(2) span:nth-child(1) {
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#search_list ul:hover {
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
+#page {
+    position: absolute;
+    bottom: 10px;
+    float: left;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+#page a {
+    display: inline-block;
+    width: 20px;
+}
+
+.clickState {
+    background-color: #0479E8;
+    color: #FFFFFF !important
+}

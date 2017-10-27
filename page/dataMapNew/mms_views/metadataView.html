@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>全景视图</title>
+    <link rel="stylesheet" href="../mms_css/reset.css">
+    <link rel="stylesheet" href="../mms_css/metadataAssetsPublic.css">
+</head>
+
+<body>
+    <div class="metadata_assets">
+        <div class="metadata_map_title">
+            <span></span>
+            <p>国家开发银行数据全景地图</p>
+        </div>
+        <div class="metadata_map_list">
+            <div class="metadata_info_left">
+                <div class="metadata_info_title flex_public">
+                    <p>全景视图</p>
+                    <span class="map_view">查看</span>
+                </div>
+                <div class="metadata_info_map">
+                    <div class="metadata_options flex_public view_flex">
+                        <div class="options_checkbox">
+                            <p>业务条线：</p>
+                            <select name="" id="">
+                                <option value="">信贷业务</option>
+                                <option value="">数据备份恢复记录</option>
+                                <option value="">数据归档记录</option>
+                                <option value="">系统用户使用记录</option>
+                                <option value="">ETL运行记录</option>
+                                <option value="">ETL程序</option>
+                                <option value="">技术程序</option>
+                                <option value="">物理模型</option>
+                                <option value="">逻辑模型</option>
+                                <option value="">业务规则</option>
+                                <option value="">术语</option>
+                                <option value="">系统信息</option>
+                                <option value="">业务数据类型</option>
+                                <option value="">概念模型</option>
+                            </select>
+                        </div>
+                        <div class="options_checkbox">
+                            <p>系统权限：</p>
+                            <select name="" id="">
+                                <option value="">统一报表</option>
+                                <option value="">数据备份恢复记录</option>
+                                <option value="">数据归档记录</option>
+                                <option value="">系统用户使用记录</option>
+                                <option value="">ETL运行记录</option>
+                                <option value="">ETL程序</option>
+                                <option value="">技术程序</option>
+                                <option value="">物理模型</option>
+                                <option value="">逻辑模型</option>
+                                <option value="">业务规则</option>
+                                <option value="">术语</option>
+                                <option value="">系统信息</option>
+                                <option value="">业务数据类型</option>
+                                <option value="">概念模型</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="metadata_graph" id="view_graph"></div>
+                    <div class="map_legend">
+                        <div class="legend_title">
+                            <p>地图图例</p>
+                        </div>
+                        <div class="legend_info">
+                            <ul id="view_legend"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="metadata_info_right">
+                <div class="login_info">
+                    <div class="username_pic"></div>
+                    <div class="username_info">
+                        <div class="username_wel">
+                            <p>欢迎您，</p>
+                            <span id="view_username">admin2</span>
+                        </div>
+                        <div class="login_time">
+                            <p>最近登录时间：</p>
+                            <span>2017年8月31日 18:32:32</span>
+                        </div>
+                        <div class="username_center">
+                            <span class="personal_center">个人中心</span>
+                            <span class="exit">退出</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update_info">
+                    <div class="update_info_title flex_public">
+                        <p>元数据关系</p>
+                        <span>查看</span>
+                    </div>
+                    <div class="update_info_list">
+                        <div class="metadata_relation_option flex_public">
+                            <div class="options_checkbox">
+                                <p>业务条线：</p>
+                                <select name="" id="">
+                                    <option value="">信贷业务</option>
+                                    <option value="">数据备份恢复记录</option>
+                                    <option value="">数据归档记录</option>
+                                    <option value="">系统用户使用记录</option>
+                                    <option value="">ETL运行记录</option>
+                                    <option value="">ETL程序</option>
+                                    <option value="">技术程序</option>
+                                    <option value="">物理模型</option>
+                                    <option value="">逻辑模型</option>
+                                    <option value="">业务规则</option>
+                                    <option value="">术语</option>
+                                    <option value="">系统信息</option>
+                                    <option value="">业务数据类型</option>
+                                    <option value="">概念模型</option>
+                                </select>
+                            </div>
+                            <div class="options_checkbox">
+                                <p>系统权限：</p>
+                                <select name="" id="">
+                                    <option value="">统一报表</option>
+                                    <option value="">数据备份恢复记录</option>
+                                    <option value="">数据归档记录</option>
+                                    <option value="">系统用户使用记录</option>
+                                    <option value="">ETL运行记录</option>
+                                    <option value="">ETL程序</option>
+                                    <option value="">技术程序</option>
+                                    <option value="">物理模型</option>
+                                    <option value="">逻辑模型</option>
+                                    <option value="">业务规则</option>
+                                    <option value="">术语</option>
+                                    <option value="">系统信息</option>
+                                    <option value="">业务数据类型</option>
+                                    <option value="">概念模型</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="metadata_relation_map"></div>
+                    </div>
+                </div>
+                <div class="recents">
+                    <div class="update_info_title last_visit_top flex_public">
+                        <p>最近访问</p>
+                        <span>查看</span>
+                    </div>
+                    <div class="update_info_list last_visit_bottom">
+                        <div class="name_time name_visit_top flex_public">
+                            <p>名称</p>
+                            <p>访问时间</p>
+                        </div>
+                        <div class="system_list name_visit_bottom">
+                            <ul id="view_visit_time"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../mms_lib/jquery.min.js"></script>
+    <script src="../mms_lib/d3.v4.min.js"></script>
+    <script src="../mms_js/metadataAssetsPublic.js"></script>
+    <script src="../mms_lib/jquery.nicescroll.js"></script>
+</body>
+
+</html>

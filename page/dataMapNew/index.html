@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元数据展示地图</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="mms_css/reset.css">
+	<link rel="stylesheet" href="mms_css/loginPage.css">
+	<link rel="shortcut icon"  href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="login_page">
+		<div class="cbd_logo">
+			<img src="mms_images/cbd_logo.png" alt="">
+		</div>
+		<div class="login_box">
+			<div class="login_title">
+				<p>数据全景地图系统</p>
+				<p>Data Panoramic Map System</p>
+			</div>
+			<div class="login_form">
+				<div class="login_top">
+					<p>欢迎登录 / Welcome</p>
+				</div>
+				<div class="login_bottom">
+					<form id="login_form" >
+						<p class="login_username">
+							<label for="username">用户名 :</label>
+							<input type="text" id="username" name="username" placeholder="请输入您的用户名">
+						</p>
+						<p class="login_password">
+							<label for="password">&emsp;密码 :</label>
+							<input type="password" id="password" name="password" placeholder="请输入您的密码">
+						</p>
+						<p class="login_errInfo" id="login_errInfo"></p>						
+						<p class="login_btn">
+							<button id="login_btn">登录</button>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="mms_lib/jquery.min.js"></script>
+	<script src="mms_js/loginPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+{
+    "data": [
+        {
+            "data": [],
+            "table_code": "B_DM_PROJ_INFO",
+            "table_name": "B_DM_PROJ_INFO",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/生产库目录_URPT/URPT2/B_DM_PROJ_INFO",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "u3c60f731fed471ba66ddc483591c79d"
+        },
+
+        {
+            "data": [],
+            "table_code": "B_DM_CON_SUB_RELATION",
+            "table_name": "B_DM_CON_SUB_RELATION",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/URS9/B_DM_CON_SUB_RELATION",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "o35ef229a15340468a74d95aeaa75e6a"
+        },
+
+        {
+            "data": [],
+            "table_code": "MID_MID_DM_PROJ_INFO",
+            "table_name": "MID_MID_DM_PROJ_INFO",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/RPT_DM/MID_MID_DM_PROJ_INFO",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "o6b93d18fd074117877c3118905f60f9"
+        },
+
+        {
+            "data": [],
+            "table_code": "RP_FM_CL_CONT_PROJ_YBWB",
+            "table_name": "RP_FM_CL_CONT_PROJ_YBWB",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/RPT_DM/RP_FM_CL_CONT_PROJ_YBWB",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "p55f450395d04913a719df600d191bf1"
+        },
+
+        {
+            "data": [],
+            "table_code": "T_DM_PROJ_INFO,T_DM_LOAN_ACCT",
+            "table_name": "T_DM_PROJ_INFO,T_DM_LOAN_ACCT",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/RPT_DM/T_DM_PROJ_INFO,T_DM_LOAN_ACCT",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "he38844ecf904d87b524902c3245658c"
+        },
+
+
+        {
+            "data": [],
+            "table_code": "S_DM_PROJ_INFO",
+            "table_name": "S_DM_PROJ_INFO",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/RPT_DM/S_DM_PROJ_INFO",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "t831e7b2591443c1939c284ce2afa37a"
+        },
+
+        {
+            "data": [],
+            "table_code": "RP_FM_CL_CONT_ABORT",
+            "table_name": "RP_FM_CL_CONT_ABORT",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/RPT_DM/RP_FM_CL_CONT_ABORT",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "kc584ddebe7b43c8a6e704ef6ecc0146"
+        },
+
+        {
+            "data": [],
+            "table_code": "RP_FM_AGT_SYNDICATE_EXE_MID",
+            "table_name": "RP_FM_AGT_SYNDICATE_EXE_MID",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/RPT_DM/RP_FM_AGT_SYNDICATE_EXE_MID",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "qafd263d515e48b09515068bf586e23c"
+        },
+
+        {
+            "data": [],
+            "table_code": "RP_FM_CL_CONT_SHORTLOAN_USC",
+            "table_name": "RP_FM_CL_CONT_SHORTLOAN_USC",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_REPORT/RPT_DM/RP_FM_CL_CONT_SHORTLOAN_USC",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "h24f83662afa4444b32fa5068f516fb8"
+        },
+
+        {
+            "data": [],
+            "table_code": "TS0_PROJ_INFO",
+            "table_name": "TS0_PROJ_INFO",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_MIAIS /MIAIS/TS0_PROJ_INFO",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "l7fc1343da24418f98c1f6132ca53513"
+        },
+
+        {
+            "data": [],
+            "table_code": "DM_PROJ_INFO",
+            "table_name": "DM_PROJ_INFO",
+            "begin_time": "2016-11-14 15:09:56",
+            "data_type": "表",
+            "path": "/ProductCatalog_MIAIS /MIAIS/DM_PROJ_INFO",
+            "description": "",
+            "tablespace": "",
+            "if_codetable": "",
+            "id": "i9d2fa31ef16455cb911eb7b573e33a4"
+        }
+
+    ]
+}

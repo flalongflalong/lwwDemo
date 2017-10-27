@@ -1,0 +1,134 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.login_page {
+	width: 100%;
+	height: 100%;
+	background-image: url('../mms_images/login_bg.png');
+	background-size:100% 100%; 
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.cbd_logo {
+	width: 240px;
+	height: 42px;
+	position: absolute;
+	left: 35px;
+	top: 25px;
+}
+
+.login_box {
+	width: 750px;
+	height: 592px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/*display: none;*/
+}
+
+.login_title {
+	width: 100%;
+	height: 126px;
+	box-sizing:border-box;
+	/*background:purple;*/
+	border-radius: 5px 5px 0 0;
+}
+
+.login_title p {
+	color:#fff;
+	text-align: center;
+	text-shadow: 2px 2px 10px #000;
+}
+
+.login_title p:first-child {
+	font-size:50px;
+	letter-spacing: 10px;
+}
+
+.login_title p:last-child {
+	font-size: 20px;
+	letter-spacing: 8px;
+}
+
+.login_form {
+	width: 100%;
+	height: 466px;
+	border-radius: 3px;
+	box-shadow: 3px 3px rgba(255,255,255,.2),-3px -3px  rgba(255,255,255,.2);
+}
+
+.login_top {
+	width: 100%;
+	height: 84px;
+	text-align: center;
+	line-height: 84px;
+	background-color: #192544;
+	border-bottom: 1px solid #141d34;
+}
+
+.login_top p {
+	color: #fff;
+	font-size: 20px;
+}
+
+.login_bottom {
+	width: 100%;
+	height: 381px;
+	overflow: hidden;
+	background-color: rgba(33,46,86,.5);
+	position: relative;
+}
+
+.login_bottom p {
+	color: #fff;
+	text-align: center;
+}
+
+.login_bottom p input{
+	width: 290px;
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 8px;
+	box-sizing:border-box;
+	background-color: #fff;
+}
+
+.login_btn #login_btn {
+	width: 290px;
+	height: 46px;
+	background-color: #4384d0;
+	text-align: center;
+	line-height: 46px;
+	color: #fff;
+	font-size: 18px;
+	font-family: sans-serif;
+	letter-spacing: 20px;
+	margin-left: 60px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.login_username {
+	margin-top: 90px;
+}
+
+.login_password,.login_btn {
+	margin-top: 20px;
+}
+
+p#login_errInfo {
+	width: 290px;
+	height: 40px;
+	border-radius: 4px;
+	position: absolute;
+	top: 50px;
+	left: 260px;
+	color: red;
+	text-align: left;
+	line-height: 40px;
+	display: none;
+}

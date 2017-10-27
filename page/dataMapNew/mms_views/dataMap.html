@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>元数据展示地图</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../mms_css/reset.css">
+    <link rel="stylesheet" href="../mms_css/dataMap.css">
+    <link rel="stylesheet" href="../mms_lib/tree_files/fenye.css">
+    <link rel="stylesheet" href="../mms_lib/tree_files/font-awesome.min.css">
+    <link rel="stylesheet" href="../mms_lib/tree_files/ace.min.css">
+    <link rel="stylesheet" href="../mms_css/search_fenye.css">
+    <link rel="stylesheet" href="../mms_css/datamapwxc.css">
+    <link rel="stylesheet" href="../mms_css/main.css">
+    <link rel="stylesheet" href="../mms_css/yuan.css">
+    <link rel="stylesheet" href="../mms_css/xueyuan1.css">
+    <link rel="stylesheet" href="../mms_css/xueyuan2.css">
+    <link rel="stylesheet" href="../mms_css/xueyuan3.css">
+</head>
+
+<body>
+    <div class="cbd_data">
+        <!-- 搜索框那一栏开始 -->
+        <div class="metadata_info">
+            <!--  <div class="metadata_name">
+                <div class="map_logo_title" id="map_logo_title">
+                    <span></span>
+                    <p>国家开发银行元数据地图系统</p>
+                </div> -->
+            <!-- 进入系统后的报表title开始 -->
+            <!-- <div class="report_system" id="report_system">
+                    <div class="report_title">
+                        <span></span>
+                        <p id="system_area">应用服务区</p>
+                        <span></span>
+                        <p id="system_name">统一报表系统</p>
+                    </div>
+                </div> -->
+            <!-- 进入系统后的报表title结束 -->
+            <!-- </div> -->
+            <!-- <div class="metadata_tool"> -->
+            <!--  <div class="tool_title tool_title_public" id="tool_title">
+                    <ul id="tool_title_control"></ul>
+                    <ul class="tool_title_mask" id="tool_title_mask"></ul>
+                </div> -->
+            <!-- 进入系统后的title按钮开始 -->
+            <!-- <div class="report_system_tool" id="report_system_tool">
+                    <ul class="report_tool_control" id="report_tool_control"></ul>
+                </div> -->
+            <!-- 进入系统后的title按钮结束 -->
+            <!-- <div class="tool_personal_center" id="tool_personal_center"></div> -->
+            <!-- <div class="tool_search">
+                    <input id="data_search" type="search" value="请输入要搜索的内容...">
+                    <button id="search_btn" onclick="search_fenye()"></button>
+                </div> -->
+            <!-- </div> -->
+            <!-- 新版logo开始 -->
+            <!-- 左边LOGO开始 -->
+            <div class="metadata_logo">
+                <img src="../mms_images/cbd_logo_1.jpg">
+                <div class="logo_bank">
+                    <p>国家开发银行</p>
+                    <span>CHINA DEVELOPMENT BANK</span>
+                </div>
+                <div class="logo_system">
+                    <p>元数据地图应用</p>
+                    <span>METADATA MAP APPLICATION</span>
+                </div>
+            </div>
+            <!-- 左边LOGO结束 -->
+            <!-- 右边按钮开始 -->
+            <div class="metadata_control">
+                <ul id="metadata_control_ul">
+                    <li class="bg_color">元数据地图</li>
+                    <li>元数据关系</li>
+                    <li>元数据分析</li>
+                    <li class="user_center">
+                        <span class="user_img"></span>
+                        <div>
+                            <p class="username">苏磊</p>
+                            <p class="exit" id="exit">退出</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 右边按钮结束 -->
+            <!-- 新版LOGO结束 -->
+        </div>
+        <!-- 搜索框那一栏结束 -->
+        <!-- 主体内容开始 -->
+        <div class="metadata_map" id="metadata_map">
+            <!-- 两个视图按钮开始 -->
+            <div class="view_control" id="view_control">
+                <div class="full_con view_con_bg">
+                    <span></span>
+                    <p>全景视图</p>
+                </div>
+                <div class="per_con">
+                    <span></span>
+                    <p>个人视图</p>
+                </div>
+            </div>
+            <!-- 两个视图按钮结束 -->
+            <!-- 搜索框开始 -->
+            <div class="tool_search" id="tool_search">
+                <input id="data_search" type="search" value="请输入要搜索的内容...">
+                <button id="search_btn" onclick="search_fenye()"></button>
+            </div>
+            <!-- 搜索框结束 -->
+            <!-- 首页全景地图开始 -->
+            <div class="body-site-leftContent chart-container" id="chart"></div>
+            <!-- 首页全景地图结束 -->
+            <!-- 表级地图开始 -->
+            <div class="chart_map" id="chart_map">
+                <div id="dataMap-home" class="dataMap-home">
+                    <div class="body-site-yuan">
+                        <div class="body-site-yuan-leftContent chart-yuan-container-yuan" id="chart-yuan"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 表级地图结束 -->
+            <!-- 进入系统后的返回按钮开始 -->
+            <!-- <div class="system_back_btn" id="system_back_btn">返回到系统</div> -->
+            <!-- 进入系统后的返回按钮结束 -->
+            <!-- 左边5个选择按钮开始 -->
+            <!-- <div class="arrow_down arrow_public" id="arrow_down">
+                <span></span>
+            </div>
+            <div class="dataMap_control" id="dataMap_control">
+                <div class="data_option option_img0" id="data_option">
+                    <ul class="data_option_con" id="data_option_con"></ul>
+                    <div class="arrow_up arrow_public" id="arrow_up">
+                        <span></span>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 左边5个按钮结束 -->
+            <!-- 左边4个按钮开始 -->
+            <!-- <div id="state" class="state">
+                <ul>
+                    <li><span><img src="../mms_images/img/relation_default.PNG"/></span>
+                        <p>元数据关系</p>
+                    </li>
+                    <li><span><img src="../mms_images/img/browse_default.PNG"/></span>
+                        <p>版本浏览</p>
+                    </li>
+                     <li><span><img src="../mms_images/img/path_default.PNG"/></span>
+                        <p>路径分析</p>
+                    </li>
+                    <li><span><img src="../mms_images/img/assets_default.PNG"/></span>
+                        <p>元数据资产</p>
+                    </li>
+                    <li><span><img src="../mms_images/img/center_default.PNG"/></span>
+                        <p>个人中心</p>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- 左边4个按钮结束 -->
+            <!-- 地图图例开始 -->
+            <div class="map_info" id="map_info_shouye">
+                <p class="legend_title" id="legend_title">地图图例</p>
+                <div class="map_legend" id="map_legend_area"></div>
+            </div>
+            <!-- 地图图例结束 -->
+            <!-- 五个数据统计信息表开始 -->
+            <!-- <div class="statistics_info" id="statistics_info">
+                <div class="metadata_statstics" id="metadata_statistics">
+                    <div class="statstics_title">
+                        <p>元数据统计信息</p>
+                        <span id="statstics_close">X</span>
+                    </div>
+                    <div class="statstics_body">
+                        <ul class="metadata_sta_top" id="metadata_sta_top"></ul>
+                        <p class="center_line">其中：</p>
+                        <ul class="metadata_sta_bottom" id="metadata_sta_bottom"></ul>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 五个数据统计信息表结束 -->
+            <!-- 弹出层开始 -->
+            <div class="data_popups" id="data_popups">
+                <div class="popups_title" id="popups_title">
+                    <p></p>
+                    <span class="relation_close" id="relation_close">X</span>
+                    <!-- 左下角图例(三个路径分析公用)开始 -->
+                    <div class="map_info" id="path_analyze_info">
+                        <p class="legend_title" id="path_legend_title">系统加工关系图例</p>
+                        <div class="map_legend" id="path_analyze_legend"></div>
+                    </div>
+                    <!-- 左下角图例(三个路径分析公用)结束 -->
+                    <!-- 切换三个路径分析地图的选项框按钮开始 -->
+                    <div class="path_analyze_options" id="path_analyze_options">
+                        <div class="small_map_title" id="small_map_title">
+                            <p>T_DM_CORP_CUST_DPST_ACCT</p>
+                            <!-- <span></span> -->
+                        </div>
+                        <div class="checkbox_btn" id="checkbox_btn">
+                            <input type="checkbox" checked id="blood_analyze">
+                            <span class="color_one"></span>
+                            <label for="blood_analyze">血缘分析</label>
+                            <input type="checkbox" id="impact_analyze">
+                            <span class="color_two"></span>
+                            <label for="impact_analyze">影响分析</label>
+                            <input type="checkbox" id="cross_sysytem">
+                            <label for="cross_sysytem">全链分析</label>
+                        </div>
+                    </div>
+                    <!-- 切换三个路径分析地图的选项框按钮结束 -->
+                </div>
+                <div class="popups_content" id="popups_content">
+                    <!-- 元数据关系开始 -->
+                    <div class="metadata_relation relation_public_style" id="metadata_relation">
+                        <div id="force1" style="display: list-item; height: 100px; visibility: visible;"></div>
+                        <!-- 元数据图例开始 -->
+                        <div class="yuanshuju_legend">
+                            <p class="yuanshuju_legend_title">图例</p>
+                            <div class="yuanshuju_map_legend">
+                                <ul>
+                                    <li>
+                                        <span></span>
+                                        <p>业务元数据</p>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <p>技术元数据</p>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <p>操作元数据</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 元数据图例结束 -->
+                    </div>
+                    <!-- 元数据关系结束 -->
+                    <!-- er关系开始 -->
+                    <div class="ER_relation relation_public_style" id="ER_relation"></div>
+                    <!-- er关系结束 -->
+                    <!-- 版本浏览开始 -->
+                    <div class="version_compare relation_public_style" id="version_compare">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="widget-box">
+                                    <div class="widget-header header-color-blue2">
+                                        <h4 class="lighter smaller">版本目录</h4>
+                                    </div>
+                                    <div class="widget-body" id="version_compare_list">
+                                        <div class="widget-main padding-8">
+                                            <div id="tree1" class="tree tree-selectable">
+                                                <div class="tree-folder" style="display:none;">
+                                                    <div class="tree-folder-header"> <i class="icon-plus"></i>
+                                                        <div class="tree-folder-name"></div>
+                                                    </div>
+                                                    <div class="tree-folder-content"></div>
+                                                    <div class="tree-loader" style="display: none;"></div>
+                                                </div>
+                                                <div class="tree-item" style="display:none;"> <i class="icon-remove"></i>
+                                                    <div class="tree-item-name"></div>
+                                                </div>
+                                                <div class="tree-folder" style="display: block;">
+                                                    <div class="tree-folder-header"> <i class="icon-plus"></i>
+                                                        <div class="tree-folder-name">1.0</div>
+                                                    </div>
+                                                    <div class="tree-folder-content"></div>
+                                                    <div class="tree-loader" style="display: none;">
+                                                        <div class="tree-loading"><i class="icon-refresh icon-spin blue"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-folder" style="display: block;">
+                                                    <div class="tree-folder-header"> <i class="icon-plus"></i>
+                                                        <div class="tree-folder-name">2.0</div>
+                                                    </div>
+                                                    <div class="tree-folder-content"></div>
+                                                    <div class="tree-loader" style="display: none;">
+                                                        <div class="tree-loading"><i class="icon-refresh icon-spin blue"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-folder" style="display: block;">
+                                                    <div class="tree-folder-header"> <i class="icon-plus"></i>
+                                                        <div class="tree-folder-name">3.0</div>
+                                                    </div>
+                                                    <div class="tree-folder-content"></div>
+                                                    <div class="tree-loader" style="display: none;">
+                                                        <div class="tree-loading"><i class="icon-refresh icon-spin blue"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-folder" style="display: block;">
+                                                    <div class="tree-folder-header"> <i class="icon-plus"></i>
+                                                        <div class="tree-folder-name">4.0</div>
+                                                    </div>
+                                                    <div class="tree-folder-content"></div>
+                                                    <div class="tree-loader" style="display: none;">
+                                                        <div class="tree-loading"><i class="icon-refresh icon-spin blue"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare_right">
+                            <div class="compare_right_title">
+                                <ul>
+                                    <li><span>业务元数据</span><span>技术元数据</span><span>操作元数据</span></li>
+                                </ul>
+                            </div>
+                            <table class="table table-striped" id="version_compare_table-striped">
+                                <tr style="background-color:#E1F1FF;">
+                                    <td>编号</td>
+                                    <td>大类</td>
+                                    <td>小类</td>
+                                    <td>定义</td>
+                                    <td>操作</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 版本浏览结束 -->
+                    <!-- 表路径分析开始 -->
+                    <div class="chart_path_analyze relation_public_style" id="chart_path_analyze">
+                        <div id="dataMap-home1" class="dataMap-home">
+                            <div class="body-site-1">
+                                <div class="body-site-1-leftContent chart-1-container" id="chart-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 表路径分析结束 -->
+                    <!-- 字段路径分析开始 -->
+                    <div class="field_path_analyze relation_public_style" id="field_path_analyze">
+                        <div id="dataMap-home2" class="dataMap-home">
+                            <div class="body-site-2">
+                                <div class="body-site-2-leftContent chart-2-container" id="chart-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 字段路径分析结束 -->
+                    <!-- 其他路径分析开始 -->
+                    <div class="other_path_analyze relation_public_style" id="other_path_analyze">
+                        <div id="dataMap-home3" class="dataMap-home">
+                            <div class="body-site-3">
+                                <div class="body-site-3-leftContent chart-3-container" id="chart-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 其他路径分析结束 -->
+                    <!-- 元数据资产开始 -->
+                    <div class="assets_pie" id="assets_pie">
+                        <div class="metadata_info_map">
+                            <div class="metadata_options flex_public">
+                                <div class="options_checkbox">
+                                    <!-- <p>系统权限：</p>
+                                        <select name="" id="">
+                                            <option value="">全部系统</option>
+                                            <option value="">数据备份恢复记录</option>
+                                            <option value="">数据归档记录</option>
+                                            <option value="">系统用户使用记录</option>
+                                            <option value="">ETL运行记录</option>
+                                            <option value="">ETL程序</option>
+                                            <option value="">技术程序</option>
+                                            <option value="">物理模型</option>
+                                            <option value="">逻辑模型</option>
+                                            <option value="">业务规则</option>
+                                            <option value="">术语</option>
+                                            <option value="">系统信息</option>
+                                            <option value="">业务数据类型</option>
+                                            <option value="">概念模型</option>
+                                        </select> -->
+                                </div>
+                                <div class="options_radio">
+                                    <input type="radio" name="system" id="metadata_class" checked>
+                                    <label for="metadata_class">按元数据类型</label>
+                                    <input type="radio" name="system" id="metadata_system">
+                                    <label for="metadata_system">按系统</label>
+                                </div>
+                            </div>
+                            <div class="metadata_graph" id="metadata_graph"></div>
+                            <div class="map_legend" id="map_legend_pie">
+                                <div class="legend_title">
+                                    <p>地图图例</p>
+                                </div>
+                                <div class="legend_info">
+                                    <ul id="assets_legend"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 元数据资产结束 -->
+                </div>
+            </div>
+            <!-- 弹出层结束 -->
+            <!-- 元数据分析页开始 -->
+            <div class="metadata_analyze_page" id="metadata_analyze_page">
+                <div class="relation_analyze">
+                    <div class="relation_analyze_title">
+                        <p>元数据系统关系分析</p>
+                    </div>
+                    <div class="relation_analyze_content"></div>
+                </div>
+                <div class="analyze_result">
+                    <div class="analyze_result_title">
+                        <p>元数据系统关系分析结果</p>
+                    </div>
+                    <div class="analyze_result_content"></div>
+                </div>
+            </div>
+            <!-- 元数据分析页结束 -->
+            <!-- 元数据关系页开始 -->
+            <div class="metadata_relation_page" id="metadata_relation_page">
+                <div class="metadata_relation_title">
+                    <p>元数据关系</p>
+                </div>
+                <div class="metadata_relation_content"></div>
+            </div>
+            <!-- 元数据关系页结束 -->
+            <!-- 个人中心开始 -->
+            <div class="personal_center_page" id="personal_center_page">
+                <div class="center_page_title">
+                    <p>个人中心</p>
+                </div>
+                <div class="center_page_content">
+                    <div class="meta_personal_center relation_public_style" id="meta_personal_center">
+                        <div class="personal_title">
+                            <div class="title_left" id="personal_title_btn">
+                                <button type="button" class="btn btn-primary">系统公告</button>
+                                <button type="button" class="btn btn-default">我的收藏</button>
+                                <button type="button" class="btn btn-default">历史记录</button>
+                            </div>
+                            <div class="title_right">
+                                <!-- <input type="text" class="form-control" placeholder="请输入搜索的内容....."> -->
+                                <!--   
+                             -->
+                                <!-- <input type="button" style="background: url('../mms_images/search_person_center.png') no-repeat; background-size: cover;width: 60px;height: 34px;border: none;"> -->
+                            </div>
+                        </div>
+                        <div class="personal_center_content" id="personal_center_content">
+                            <!-- 系统公告开始 -->
+                            <div class="system_announcement">
+                                <table class="table table-striped" id="person_center_table-striped">
+                                    <!-- <div id='content' style="background-color:#F2F2F2;"> -->
+                                    <!-- <p style='display:none;'></p> -->
+                                    <tr>
+                                        <td colspan="5" style="background-color:#DADADA;">公告列表</td>
+                                    </tr>
+                                    <tr style="background-color:#E1F1FF;">
+                                        <td>公共名称</td>
+                                        <td>公共类型</td>
+                                        <td>发布时间</td>
+                                        <td>发布人</td>
+                                        <td>操作</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- 系统公告结束 -->
+                            <!-- 我的收藏开始 -->
+                            <div class="my_favorite">
+                                <table class="table table-striped" id="my_favorite_list">
+                                    <!-- <div id='content' style="background-color:#F2F2F2;"> -->
+                                    <!-- <p style='display:none;'></p> -->
+                                    <tr>
+                                        <td colspan="5" style="background-color:#DADADA;">收藏列表</td>
+                                    </tr>
+                                    <tr style="background-color:#E1F1FF;">
+                                        <td>系统名称</td>
+                                        <td>系统所属区</td>
+                                        <td>发布时间</td>
+                                        <td>收藏人</td>
+                                        <td>收藏地址</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- 我的收藏结束 -->
+                            <!-- 历史记录开始 -->
+                            <div class="history">
+                                <table class="table table-striped" id="history_list">
+                                    <!-- <div id='content' style="background-color:#F2F2F2;"> -->
+                                    <!-- <p style='display:none;'></p> -->
+                                    <tr>
+                                        <td colspan="5" style="background-color:#DADADA;">记录列表</td>
+                                    </tr>
+                                    <tr style="background-color:#E1F1FF;">
+                                        <td>系统名称</td>
+                                        <td>系统所属区</td>
+                                        <td>发布时间</td>
+                                        <td>收藏人</td>
+                                        <td>操作</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- 历史记录结束 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 个人中心结束 -->
+            <!-- 搜索列表开始 -->
+            <div id="serach_result">
+                <div id="search_list" style="float:left;"></div>
+                <div id="page"></div>
+            </div>
+            <!-- 搜索列表结束 -->
+            <!-- 添加饼图开始 -->
+            <!-- <div class="metadata_pie" id="metadata_pie">
+                <p class="metadata_pie_title">元数据统计信息</p>
+            </div> -->
+            <!-- 添加饼图结束 -->
+            <!-- 返回其他搜索结果div开始 -->
+            <div class="search_back_btn" id="search_back_btn">
+                <span> ‹ </span>
+                <p>返回其他搜索结果</p>
+            </div>
+            <!-- 返回其他搜索结果div结束 -->
+            <!-- 系统信息列表开始 -->
+            <div class="system_list" id="system_list">
+                <div class="system_title">
+                    <div class="system_title_per" id="system_title_per">
+                        <p>数据仓库系统</p>
+                        <span></span>
+                    </div>
+                    <div class="system_title_tab" id="system_title_tab">
+                        <p>业务元数据</p>
+                        <p>技术元数据</p>
+                        <p>操作元数据</p>
+                    </div>
+                </div>
+                <div class="system_content">
+                    <!-- <div class="system_info" id="system_info">
+                        <div class="system_info_title">
+                            <p>定义：</p>
+                        </div>
+                        <div class="system_info_news" id="system_info_news"></div>
+                    </div>
+                    <div class="system_subClass" id="system_subClass">
+                        <div class="system_subClass_label">
+                            <p>标签</p>
+                        </div>
+                        <div class="system_subClass_news" id="system_subClass_news"></div>
+                    </div> -->
+                    <div class="system_content_list" id="system_content_list">
+                        <ul class="system_content_list_ul" id="system_content_list_ul"></ul>
+                    </div>
+                    <!-- <div class="system_btn" id="system_btn">
+                        <button class="system_join_btn" id="system_join_btn">进入系统</button>
+                    </div> -->
+                    <!-- 系统信息列表图片按钮开始 -->
+                    <div class="system_list_btn">
+                        <div class="system_btn_top">
+                            <div class="system_relation_btn" id="system_relation_btn">
+                                <img src="../mms_images/btn_img/system_relation_btn.png">
+                                <p>系统关系</p>
+                            </div>
+                            <div class="metadata_relation_btn" id="metadata_relation_btn">
+                                <img src="../mms_images/btn_img/metadata_relation_btn.png">
+                                <p>元数据关系</p>
+                            </div>
+                            <div class="metadata_asstes_btn" id="metadata_asstes_btn">
+                                <img src="../mms_images/btn_img/metadata_assets_btn.png">
+                                <p>元数据资产</p>
+                            </div>
+                        </div>
+                        <div class="system_btn_bottom">
+                            <div class="version_compare_btn" id="version_compare_btn">
+                                <img src="../mms_images/btn_img/version_compare_btn.png">
+                                <p>版本比较</p>
+                            </div>
+                            <div class="add_view_btn" id="add_view_btn">
+                                <img src="../mms_images/btn_img/add_view_btn.png">
+                                <p>添加视图</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 系统信息列表图片按钮结束 -->
+                </div>
+            </div>
+            <!-- 系统信息列表结束 -->
+            <!-- 表信息列表开始 -->
+            <div class="system_list" id="chart_list">
+                <div class="system_title">
+                    <div class="system_title_per" id="chart_title_per">
+                        <p>T_DM_CORP_CUST_DPST_ACCT</p>
+                        <!-- <span></span> -->
+                    </div>
+                    <div class="system_title_tab" id="chart_title_tab">
+                        <p>业务元数据</p>
+                        <p>技术元数据</p>
+                        <p>操作元数据</p>
+                    </div>
+                </div>
+                <div class="system_content">
+                    <div class="system_content_list" id="chart_content_list">
+                        <ul class="system_content_list_ul" id="chart_content_list_ul"></ul>
+                    </div>
+                    <div class="report_content_list" id="chart_report_content_list">
+                        <div class="report_title_con" id="chart_report_title_con">
+                            <p>表</p>
+                            <p class="bg_style_default">字段</p>
+                        </div>
+                        <div class="report_list_info">
+                            <div class="report_list_chart" id="chart_report_list_chart">
+                                <ul class="report_list_chart_ul" id="chart_report_list_chart_ul"></ul>
+                            </div>
+                            <div class="report_list_ziduan" id="chart_report_list_ziduan">
+                                <ul class="report_list_ziduan_ul" id="chart_report_list_ziduan_ul"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="system_btn" id="chart_btn">
+                        <button class="system_join_btn" id="chart_join_btn">路径分析</button>
+                    </div> -->
+                    <!-- 表信息列表中按钮开始 -->
+                    <div class="chart_list_btn">
+                        <div class="chart_path_btn" id="chart_path_btn">
+                            <img src="../mms_images/btn_img/chart_path_btn.png">
+                            <p>路径分析</p>
+                        </div>
+                        <div class="chart_addview_btn" id="chart_addview_btn">
+                            <img src="../mms_images/btn_img/add_view_btn.png">
+                            <p>添加到个人视图</p>
+                        </div>
+                    </div>
+                    <!-- 表信息列表中按钮结束 -->
+                </div>
+            </div>
+            <!-- 表信息列表结束 -->
+            <!-- 单系统路径分析列表开始 -->
+            <div class="single_system_path" id="single_system_path">
+                <div class="system_title_per" id="single_system_title_news">
+                    <p>数据仓库系统</p>
+                    <span></span>
+                </div>
+                <div class="single_path_analyze">
+                    <div class="single_upstream_list" id="single_upstream_list_news">
+                        <div class="single_upstream_title upstream_title_public">上游系统</div>
+                        <div class="single_upstream_info path_info_public" id="single_upstream_info">
+                            <ul class="path_info_ul_public upstream_system_info" id="single_upstream_info_ul_news"></ul>
+                        </div>
+                    </div>
+                    <div class="single_downstream_list" id="single_downstream_list_news">
+                        <div class="single_downstream_title downstream_title_public">下游系统</div>
+                        <div class="single_downstream_info path_info_public" id="single_downstream_info">
+                            <ul class="path_info_ul_public downstream_system_info" id="single_downstream_info_ul_news"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="system_btn">
+                    <button class="system_join_btn path_analyze_btn">进入系统</button>
+                </div>
+            </div>
+            <!-- 单系统路径分析列表结束 -->
+            <!-- 多系统路径分析列表开始 -->
+            <div class="multisystem_list" id="multisystem_list"></div>
+            <!-- 多系统路径分析列表结束 -->
+            <!-- 元数据资产开始 -->
+            <!-- 元数据资产结束 -->
+        </div>
+        <!-- 主体内容结束 -->
+        <!-- 全屏遮罩层开始 -->
+        <div class="full_screen_mask" id="full_screen_mask"></div>
+        <!-- 全屏遮罩层开始 -->
+    </div>
+    <!--[if !IE]>
+    <script src="../mms_lib/tree_files/jquery-2.0.3.min.js"></script>
+        
+    <![endif]-->
+    <script src="../mms_lib/jquery.min.js"></script>
+    <script src="../mms_lib/d3.v4.min.js"></script>
+    <script src="../mms_lib/jquery.json.js"></script>
+    <script src="../mms_lib/jquery.browser.min.js"></script>
+    <!-- <script src="../mms_lib/d3.v3.js"></script> -->
+    <!-- <script src="../mms_lib/d3.v4.js"></script> -->
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+    <!--<script src="../mms_js/packages.js"></script>-->
+    <script src="../mms_js/fenye.js"></script>
+    <!--<script src="../mms_lib/tree_files/bootstrap.min.js"></script>-->
+    <!--<script src="../mms_lib/tree_files/fuelux.tree-sampledata.js"></script>-->
+    <!--<script src="../mms_lib/tree_files/fuelux.tree.min.js"></script>-->
+    <!--<script src="../mms_lib/tree_files/ace-elements.min.js"></script>-->
+    <!--<script src="../mms_lib/tree_files/ace.min.js"></script>-->
+    <script src="../mms_lib/jquery.nicescroll.js"></script>
+    <script src="../mms_js/colorbrewer.js"></script>
+    <script src="../mms_js/d3-datamapsankey.js"></script>
+    <script src="../mms_js/datamapwxc.js"></script>
+    <script src="../mms_js/forceApp.js"></script>
+    <script src="../mms_js/metadataAssetsPublic.js"></script>
+    <script src="../mms_js/search_fenye.js"></script>
+    <script src="../mms_js/main.js"></script>
+    <!--<script src="../mms_js/yuan.js"></script>-->
+    <script src="../mms_js/personalCenter.js"></script>
+</body>
+
+</html>
